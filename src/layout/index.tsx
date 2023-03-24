@@ -1,15 +1,13 @@
 import React from 'react';
-import Footer from './Footer';
 import Navbar from './Navbar';
 
 export default function Layout({ children }: any) {
   return (
-    <>
-      <div className="h-20">
+    <div className="flex gap-5">
+      <div className="w-16">
         <Navbar />
       </div>
-      <main>{children}</main>
-      <Footer />
-    </>
+      <main className="flex-1">{children}</main>
+    </div>
   );
 }

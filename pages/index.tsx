@@ -1,5 +1,5 @@
-import Home from 'src/homepage';
+import FlexBox from 'src/flexbox';
 
 export default function HomePage() {
-  return <Home />;
+  return <FlexBox />;
 }

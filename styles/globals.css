@@ -56,3 +56,35 @@ body {
 .c-container-sm {
   @apply mx-auto max-w-[900px] px-5;
 }
+
+.c-title {
+  @apply font-semibold text-gray-50;
+}
+
+.c-title-faded {
+  @apply font-semibold text-gray-400;
+}
+
+/* BORDERS */
+
+.c-border {
+  @apply border border-gray-300 dark:border-gray-600;
+}
+
+.c-border-directional {
+  @apply border-gray-300 dark:border-gray-600;
+}
+
+.bg-stripes {
+  background: linear-gradient(
+    135deg,
+    #3b82f680 10%,
+    transparent 0,
+    transparent 50%,
+    #3b82f680 0,
+    #3b82f680 60%,
+    transparent 0,
+    transparent
+  );
+  background-size: 7.07px 7.07px;
+}
