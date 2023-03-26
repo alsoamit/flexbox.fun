@@ -41,7 +41,7 @@
 }
 
 body {
-  @apply text-sm;
+  @apply text-sm text-gray-200;
   font-family: 'Open Sans', sans-serif;
 }
 

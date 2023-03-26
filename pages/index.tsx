@@ -1,5 +1,6 @@
-import FlexBox from 'src/flexbox';
+import React from 'react';
+import Home from 'src/home';
 
-export default function HomePage() {
-  return <FlexBox />;
+export default function Homepage() {
+  return <Home />;
 }

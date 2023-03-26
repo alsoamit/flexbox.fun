@@ -1,11 +1,11 @@
 export type TDisplay = 'block' | 'flex' | 'inline-flex';
 export type TAlignSelf =
-  | 'auto'
-  | 'flex-start'
-  | 'flex-end'
-  | 'center'
-  | 'baseline'
-  | 'stretch';
+  | 'self-auto'
+  | 'self-start'
+  | 'self-center'
+  | 'self-stretch'
+  | 'self-end'
+  | 'self-baseline';
 export type TFlexDirection =
   | 'flex-row'
   | 'row-reverse'

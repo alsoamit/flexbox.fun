@@ -25,15 +25,7 @@ const initialState: IAppState = {
 };
 
 const initialItemsState: IFlexItemsInitialState = {
-  items: [
-    {
-      alignSelf: 'auto',
-      id: '1',
-      order: 0,
-      flexGrow: 0,
-      flexShrink: 1,
-    },
-  ],
+  items: [],
 };
 
 const itemReducer = (
@@ -43,7 +35,7 @@ const itemReducer = (
   const { type, payload } = action;
 
   const newItem: IFlexItem = {
-    alignSelf: 'auto',
+    alignSelf: 'self-auto',
     order: 0,
     id: `${state.items.length}`,
     flexGrow: 0,
@@ -122,7 +114,7 @@ export default function FlexBox() {
   const [itemsState, dispatchItem] = useReducer(itemReducer, initialItemsState);
 
   return (
-    <div className="flex gap-5 py-10">
+    <div className="flex gap-5 py-10 pl-5">
       <FlexBoxContainer appState={state}>
         {itemsState.items?.map((i: IFlexItem) => (
           <FlexBoxItem
