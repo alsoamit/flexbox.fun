@@ -4,7 +4,7 @@ import { FlexBlockWidget, ItemSelfAlignWidget } from 'src/docs';
 export default function Features() {
   return (
     <div className="bg-gray-800">
-      <div className="c-container z-0 space-y-40 py-20">
+      <div className="c-container z-0 space-y-40 py-20 pt-60">
         <div className="z-0 flex gap-16">
           <div className="flex flex-1 flex-col justify-center space-y-6">
             <h3 className="c-heading-text text-4xl font-bold">

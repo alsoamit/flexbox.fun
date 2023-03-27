@@ -1,12 +1,11 @@
 import Link from 'next/link';
 import React from 'react';
-import { ItemSelfAlignWidget } from 'src/docs';
 
 export default function Hero() {
   return (
     <div className="group/wrapper relative">
       <div className="absolute inset-0 flex items-center justify-center gap-20">
-        <div className="h-full w-full">
+        <div className="h-full w-full max-w-7xl">
           <img
             src="/images/bg-gradient.png"
             className="block h-full w-full"
@@ -14,9 +13,9 @@ export default function Hero() {
           />
         </div>
       </div>
-      <div className="inset-0 bg-white/5 backdrop-blur-sm">
-        <div className="c-container mx-auto flex min-h-screen flex-col items-center justify-center gap-y-8 py-20">
-          <h1 className="c-title c-heading-text mx-auto max-w-3xl text-center text-7xl !font-extrabold leading-tight">
+      <div className="inset-0 bg-black/20 backdrop-blur-sm">
+        <div className="c-container mx-auto flex flex-col items-center justify-center gap-y-8 pt-40">
+          <h1 className="c-title c-heading-text mx-auto max-w-3xl text-center text-6xl !font-bold leading-tight">
             Most Interactive Flexbox Playground
           </h1>
           <div className="flex justify-center gap-4">
@@ -44,7 +43,7 @@ export default function Hero() {
               </span>
             </Link>
             <Link
-              href="/docs"
+              href="/tutorials"
               className="group flex items-center gap-1 rounded-full bg-gray-700 p-3 px-6 font-bold text-white"
             >
               <svg
@@ -80,6 +79,9 @@ export default function Hero() {
                 Tutorials
               </span>
             </Link>
+          </div>
+          <div id="hero_video" className="-mb-32 h-auto w-full pt-16">
+            <div className="w-full rounded-xl border bg-gray-900 py-60 shadow-xl dark:border-gray-700/40"></div>
           </div>
         </div>
       </div>
