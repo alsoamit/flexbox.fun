@@ -6,11 +6,7 @@ export default function Layout({ children }: any) {
   const router = useRouter();
   return (
     <div className="flex">
-      {router.pathname === '/app' && (
-        <div className="w-16">
-          <Navbar />
-        </div>
-      )}
+      <Navbar isAppNav={router.pathname === '/app'} />
       <main className="flex-1">{children}</main>
     </div>
   );
