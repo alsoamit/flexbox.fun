@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { Select } from 'flowbite-react';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
@@ -119,14 +120,21 @@ export function HeroWidget() {
     };
   }, [animate]);
 
+  const containerClass = classNames(
+    flexDirection,
+    justifyContent,
+    alignItems,
+    flexWrap
+  );
+
   return (
     <div
-      className="bg-stripes flex h-full w-full flex-col items-stretch md:flex-row"
+      className="bg-stripes flex h-full w-full flex-col items-stretch overflow-hidden md:flex-row"
       onMouseEnter={() => setAnimate(false)}
       onMouseLeave={() => setAnimate(true)}
     >
       <div
-        className={`flex h-80 w-full gap-2 overflow-hidden rounded-lg rounded-b-none p-2 md:h-full md:rounded-r-none md:rounded-bl-lg`}
+        className={`flex h-80 w-full gap-2 overflow-hidden p-2 md:h-96 ${containerClass}`}
       >
         <div className="flex h-10 w-20 items-center justify-center rounded-lg bg-blue-500 py-10 transition-all duration-300 md:h-20 md:w-40">
           1
@@ -140,12 +148,26 @@ export function HeroWidget() {
         <div className="flex h-10 w-20 items-center justify-center rounded-lg bg-blue-500 py-10 transition-all duration-300 md:h-20 md:w-40">
           4
         </div>
+        <div className="flex h-10 w-20 items-center justify-center rounded-lg bg-blue-500 py-10 transition-all duration-300 md:h-20 md:w-40">
+          5
+        </div>
+        <div className="flex h-10 w-20 items-center justify-center rounded-lg bg-blue-500 py-10 transition-all duration-300 md:h-20 md:w-40">
+          6
+        </div>
+        <div className="flex h-10 w-20 items-center justify-center rounded-lg bg-blue-500 py-10 transition-all duration-300 md:h-20 md:w-40">
+          7
+        </div>
       </div>
       <div className="c-border flex gap-4 border-t-0 bg-gray-900 text-sm md:h-96 md:w-96">
         <div className="w-full space-y-4 p-5 dark:bg-gray-900">
           <div className="flex items-center justify-between space-x-2">
             <h2 className="c-title flex-1 whitespace-nowrap">Flex Direction</h2>
-            <Select value={flexDirection} className="flex-1" sizing="sm">
+            <Select
+              value={flexDirection}
+              onChange={(e) => setFlexDirection(e?.target?.value as any)}
+              className="flex-1"
+              sizing="sm"
+            >
               <option value="flex-col">Flex Col</option>
               <option value="flex-col-reverse">Col Reverse</option>
               <option value="flex-row">Row</option>
@@ -156,7 +178,12 @@ export function HeroWidget() {
             <h2 className="c-title flex-1 whitespace-nowrap">
               Justify Content
             </h2>
-            <Select className="flex-1" sizing="sm" value={justifyContent}>
+            <Select
+              className="flex-1"
+              sizing="sm"
+              value={justifyContent}
+              onChange={(e) => setJustifyContent(e?.target?.value as any)}
+            >
               <option value="justify-start">Start</option>
               <option value="justify-center">Center</option>
               <option value="justify-between">Between</option>
@@ -167,7 +194,12 @@ export function HeroWidget() {
           </div>
           <div className="flex items-center justify-between space-x-2">
             <h2 className="c-title flex-1 whitespace-nowrap">Align Items</h2>
-            <Select value={alignItems} className="flex-1" sizing="sm">
+            <Select
+              value={alignItems}
+              className="flex-1"
+              sizing="sm"
+              onChange={(e) => setAlignItems(e?.target?.value as any)}
+            >
               <option value="items-start">Start</option>
               <option value="items-center">Center</option>
               <option value="items-end">End</option>
@@ -176,7 +208,12 @@ export function HeroWidget() {
           </div>
           <div className="flex items-center justify-between space-x-2">
             <h2 className="c-title flex-1 whitespace-nowrap">Flex Wrap</h2>
-            <Select className="flex-1" sizing="sm">
+            <Select
+              value={flexWrap}
+              onChange={(e) => setFlexWrap(e?.target?.value as any)}
+              className="flex-1"
+              sizing="sm"
+            >
               <option value="flex-nowrap">No Wrap</option>
               <option value="flex-wrap">Wrap</option>
               <option value="flex-wrap-reverse">Wrap Reverse</option>
