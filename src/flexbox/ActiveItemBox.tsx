@@ -69,6 +69,7 @@ export default function ActiveItemBox({
       <div className="flex items-center px-4">
         <label className="c-title flex-1">Align Self</label>
         <Select
+          sizing="sm"
           className="flex-1"
           value={item.alignSelf}
           onChange={handleAlignSelfChange}
@@ -86,6 +87,7 @@ export default function ActiveItemBox({
           Order
         </label>
         <TextInput
+          sizing="sm"
           value={item?.order}
           onChange={handleChangeOrder}
           id={`order-${item?.id}`}
@@ -98,6 +100,7 @@ export default function ActiveItemBox({
           Flex Grow
         </label>
         <TextInput
+          sizing="sm"
           value={item?.flexGrow}
           onChange={handleChangeFlexGrow}
           id={`flex-grow-${item?.id}`}
@@ -110,6 +113,7 @@ export default function ActiveItemBox({
           Flex Shrink
         </label>
         <TextInput
+          sizing="sm"
           value={item?.flexShrink}
           onChange={handleChangeFlexShrink}
           id={`flex-shrink-${item?.id}`}

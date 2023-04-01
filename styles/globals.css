@@ -68,7 +68,7 @@ body {
 /* BORDERS */
 
 .c-border {
-  @apply border border-gray-300 dark:border-gray-600;
+  @apply border border-gray-700/40;
 }
 
 .c-border-directional {

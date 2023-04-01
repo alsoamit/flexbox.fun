@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { HiBookOpen } from 'react-icons/hi';
+import { AiOutlineGithub } from 'react-icons/ai';
 
 interface INavbarProps {
   isAppNav?: boolean;
@@ -54,20 +54,71 @@ export default function Navbar({ isAppNav = false }: INavbarProps) {
     <>
       <div className="w-16"></div>
       <div className="fixed top-0 bottom-0 left-0 flex w-16 flex-col justify-between dark:bg-gray-800 dark:text-white/60">
-        <Link href="/" id="logo" className="flex justify-center px-2 py-2">
+        <Link href="/" id="logo" className="flex justify-center px-3 py-2">
           <img
             src="/images/logo.png"
             className="mb-1 w-full"
             alt="flexbox.fun"
           />
         </Link>
-        <div className="flex flex-1 flex-col items-stretch py-4">
-          <Link href="/docs" className="flex justify-center">
-            <HiBookOpen className="text-3xl" />
+        <div className="flex flex-1 flex-col items-stretch gap-y-4 py-8">
+          <Link href="/app" className="flex justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="h-7 w-7"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z"
+              />
+            </svg>
+          </Link>
+          <Link href="/tutorials" className="flex justify-center">
+            <svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+            >
+              <path
+                d="M16 7C15.4477 7 15 7.44772 15 8C15 8.55228 15.4477 9 16 9H19C19.5523 9 20 8.55228 20 8C20 7.44772 19.5523 7 19 7H16Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M15 12C15 11.4477 15.4477 11 16 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H16C15.4477 13 15 12.5523 15 12Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M16 15C15.4477 15 15 15.4477 15 16C15 16.5523 15.4477 17 16 17H19C19.5523 17 20 16.5523 20 16C20 15.4477 19.5523 15 19 15H16Z"
+                fill="currentColor"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3 3C1.34315 3 0 4.34315 0 6V18C0 19.6569 1.34315 21 3 21H21C22.6569 21 24 19.6569 24 18V6C24 4.34315 22.6569 3 21 3H3ZM21 5H13V19H21C21.5523 19 22 18.5523 22 18V6C22 5.44772 21.5523 5 21 5ZM3 5H11V19H3C2.44772 19 2 18.5523 2 18V6C2 5.44772 2.44772 5 3 5Z"
+                fill="currentColor"
+              ></path>
+            </svg>
           </Link>
         </div>
-        <div>
-          <h2>Flexbox</h2>
+        <div className="flex items-center justify-center py-4">
+          <Link href="">
+            <AiOutlineGithub className="text-3xl" />
+          </Link>
         </div>
       </div>
     </>

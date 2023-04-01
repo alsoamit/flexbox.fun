@@ -43,14 +43,14 @@ export function FlexBlockWidget() {
       onMouseLeave={() => setAnimate(true)}
     >
       <div
-        className={`c-border bg-stripes h-full w-full overflow-hidden rounded-t-lg p-2 ${
+        className={`c-border bg-stripes h-60 w-full overflow-hidden rounded-t-lg p-2 md:h-full ${
           isFlex ? 'flex gap-2' : 'block space-y-2'
         }`}
       >
-        <div className="flex h-20 w-40 items-center justify-center rounded-lg bg-blue-500 py-10 transition-all duration-300">
+        <div className="flex h-10 w-20 items-center justify-center rounded-lg bg-blue-500 py-10 transition-all duration-300 md:h-20 md:w-40">
           1
         </div>
-        <div className="flex h-20 w-40 items-center justify-center rounded-lg bg-blue-500 py-10 transition-all duration-300">
+        <div className="flex h-10 w-20 items-center justify-center rounded-lg bg-blue-500 py-10 transition-all duration-300 md:h-20 md:w-40">
           1
         </div>
       </div>
@@ -129,17 +129,17 @@ export function ItemSelfAlignWidget() {
       onMouseLeave={() => setAnimate(true)}
     >
       <div
-        className={`c-border bg-stripes flex h-full w-full gap-2 overflow-hidden rounded-t-lg p-2 transition-all duration-300`}
+        className={`c-border bg-stripes flex h-60 w-full gap-2 overflow-hidden rounded-t-lg p-2 transition-all duration-300 md:h-full`}
       >
         <div
-          className={`${selected.value} flex w-28 items-center justify-center rounded-lg bg-orange-500 py-10 transition-all duration-300`}
+          className={`${selected.value} flex w-20 items-center justify-center rounded-lg bg-orange-500 py-10 transition-all duration-300 md:w-28`}
         >
           1
         </div>
-        <div className="flex w-28 items-center justify-center rounded-lg bg-blue-500 py-10 transition-all duration-300">
+        <div className="flex w-20 items-center justify-center rounded-lg bg-blue-500 py-10 transition-all duration-300 md:w-28">
           2
         </div>
-        <div className="flex w-28 items-center justify-center rounded-lg bg-blue-500 py-10 transition-all duration-300">
+        <div className="flex w-20 items-center justify-center rounded-lg bg-blue-500 py-10 transition-all duration-300 md:w-28">
           3
         </div>
       </div>

@@ -23,8 +23,9 @@ export default function FlexBoxItem({
   };
 
   const itemClass = classNames(
-    `flex w-40 items-center justify-center rounded-lg bg-blue-500 py-10`,
-    { 'border-white border': item?.id === activeItemId }
+    `flex px-16 items-center justify-center rounded-lg bg-blue-500 py-10`,
+    { 'border-white border': item?.id === activeItemId },
+    { [item?.alignSelf]: true }
   );
 
   const style = {

@@ -50,25 +50,26 @@ export default function ToolBox({
   return (
     <>
       <div className="w-80"></div>
-      <section className="fixed top-0 bottom-0 right-0 col-span-4 w-80 space-y-6 p-2 py-10 dark:bg-gray-800">
+      <section className="fixed top-0 bottom-0 right-0 col-span-4 w-80 space-y-6 overflow-y-auto p-2 py-5 dark:bg-gray-800">
         <div className="">
-          <Button
+          <button
             onClick={(e: any) =>
               dispatchItem({
                 type: FlexItemsActionKind.AddItem,
               })
             }
-            color="purple"
+            className="flex w-full items-center justify-center rounded-lg bg-blue-500 py-2.5 font-bold"
           >
             <HiOutlinePlus className="mr-2 text-lg" />
             Add Item
-          </Button>
+          </button>
         </div>
         <div className="c-border space-y-4 rounded-lg p-5 dark:bg-gray-900">
           <div className="c-title-faded">Flex Container</div>
           <div className="flex items-center justify-between space-x-2">
             <h2 className="c-title flex-1">Display</h2>
             <Select
+              sizing="sm"
               className="flex-1"
               value={state.display}
               onChange={handleDisplayValueChange}
@@ -80,6 +81,7 @@ export default function ToolBox({
           <div className="flex items-center justify-between space-x-2">
             <h2 className="c-title flex-1">Flex Direction</h2>
             <Select
+              sizing="sm"
               className="flex-1"
               value={state.flexDirection}
               onChange={handleFlexDirectionChange}
@@ -93,6 +95,7 @@ export default function ToolBox({
           <div className="flex items-center justify-between space-x-2">
             <h2 className="c-title flex-1">Justify Content</h2>
             <Select
+              sizing="sm"
               className="flex-1"
               value={state.justifyContent}
               onChange={handleJustifyContentChange}
@@ -106,6 +109,7 @@ export default function ToolBox({
           <div className="flex items-center justify-between space-x-2">
             <h2 className="c-title flex-1">Align Content</h2>
             <Select
+              sizing="sm"
               className="flex-1"
               value={state.alignContent}
               onChange={handleAlignContentChange}
@@ -122,6 +126,7 @@ export default function ToolBox({
           <div className="flex items-center justify-between space-x-2">
             <h2 className="c-title flex-1">Align Items</h2>
             <Select
+              sizing="sm"
               className="flex-1"
               value={state.alignItems}
               onChange={handleAlignItemsChange}
@@ -135,6 +140,7 @@ export default function ToolBox({
           <div className="flex items-center justify-between space-x-2">
             <h2 className="c-title flex-1">Flex Wrap</h2>
             <Select
+              sizing="sm"
               className="flex-1"
               value={state.wrap}
               onChange={handleFlexWrapChange}

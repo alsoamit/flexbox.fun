@@ -1,5 +1,13 @@
+import { Select } from 'flowbite-react';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Toggle } from 'src/docs';
+import {
+  IAlignItems,
+  IFlexWrap,
+  IJustifyContent,
+  TFlexDirection,
+} from 'src/flexbox/flexbox.types';
 
 export default function Hero() {
   return (
@@ -14,11 +22,14 @@ export default function Hero() {
         </div>
       </div>
       <div className="inset-0 bg-black/20 backdrop-blur-sm">
-        <div className="c-container mx-auto flex flex-col items-center justify-center gap-y-8 pt-40">
-          <h1 className="c-title c-heading-text mx-auto max-w-3xl text-center text-6xl !font-bold leading-tight">
-            Most Interactive Flexbox Playground
+        <div className="c-container mx-auto flex flex-col items-center justify-center gap-y-6 pt-32 md:pt-40">
+          <h1 className="c-title c-heading-text mx-auto max-w-2xl text-center text-5xl !font-bold leading-tight md:text-6xl">
+            Unleash Your Creativity with Flexbox
           </h1>
-          <div className="flex justify-center gap-4">
+          <p className="px-4 text-center">
+            A Flexbox Playground that Lets You Experiment and Master Web Layouts
+          </p>
+          <div className="flex justify-center gap-4 pt-2">
             <Link
               href="/app"
               className="group flex items-center justify-center gap-1 rounded-full bg-blue-500 p-3 px-6 font-bold text-white"
@@ -81,7 +92,95 @@ export default function Hero() {
             </Link>
           </div>
           <div id="hero_video" className="-mb-32 h-auto w-full pt-16">
-            <div className="w-full rounded-xl border bg-gray-900 py-60 shadow-xl dark:border-gray-700/40"></div>
+            <div className="w-full overflow-hidden rounded-xl border bg-gray-900 shadow-xl dark:border-gray-700/40">
+              <HeroWidget />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function HeroWidget() {
+  const [animate, setAnimate] = useState(true);
+  const [flexDirection, setFlexDirection] =
+    useState<TFlexDirection>('flex-row');
+  const [justifyContent, setJustifyContent] =
+    useState<IJustifyContent>('justify-start');
+  const [alignItems, setAlignItems] = useState<IAlignItems>('items-start');
+  const [flexWrap, setFlexWrap] = useState<IFlexWrap>('flex-wrap');
+
+  useEffect(() => {
+    if (!animate) return;
+    const interval = setInterval(() => {}, 3000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [animate]);
+
+  return (
+    <div
+      className="bg-stripes flex h-full w-full flex-col items-stretch md:flex-row"
+      onMouseEnter={() => setAnimate(false)}
+      onMouseLeave={() => setAnimate(true)}
+    >
+      <div
+        className={`flex h-80 w-full gap-2 overflow-hidden rounded-lg rounded-b-none p-2 md:h-full md:rounded-r-none md:rounded-bl-lg`}
+      >
+        <div className="flex h-10 w-20 items-center justify-center rounded-lg bg-blue-500 py-10 transition-all duration-300 md:h-20 md:w-40">
+          1
+        </div>
+        <div className="flex h-10 w-20 items-center justify-center rounded-lg bg-blue-500 py-10 transition-all duration-300 md:h-20 md:w-40">
+          2
+        </div>
+        <div className="flex h-10 w-20 items-center justify-center rounded-lg bg-blue-500 py-10 transition-all duration-300 md:h-20 md:w-40">
+          3
+        </div>
+        <div className="flex h-10 w-20 items-center justify-center rounded-lg bg-blue-500 py-10 transition-all duration-300 md:h-20 md:w-40">
+          4
+        </div>
+      </div>
+      <div className="c-border flex gap-4 border-t-0 bg-gray-900 text-sm md:h-96 md:w-96">
+        <div className="w-full space-y-4 p-5 dark:bg-gray-900">
+          <div className="flex items-center justify-between space-x-2">
+            <h2 className="c-title flex-1 whitespace-nowrap">Flex Direction</h2>
+            <Select value={flexDirection} className="flex-1" sizing="sm">
+              <option value="flex-col">Flex Col</option>
+              <option value="flex-col-reverse">Col Reverse</option>
+              <option value="flex-row">Row</option>
+              <option value="flex-row-reverse">Row Reverse</option>
+            </Select>
+          </div>
+          <div className="flex items-center justify-between space-x-2">
+            <h2 className="c-title flex-1 whitespace-nowrap">
+              Justify Content
+            </h2>
+            <Select className="flex-1" sizing="sm" value={justifyContent}>
+              <option value="justify-start">Start</option>
+              <option value="justify-center">Center</option>
+              <option value="justify-between">Between</option>
+              <option value="justify-around">Around</option>
+              <option value="justify-evenly">Evenly</option>
+              <option value="justify-start">End</option>
+            </Select>
+          </div>
+          <div className="flex items-center justify-between space-x-2">
+            <h2 className="c-title flex-1 whitespace-nowrap">Align Items</h2>
+            <Select value={alignItems} className="flex-1" sizing="sm">
+              <option value="items-start">Start</option>
+              <option value="items-center">Center</option>
+              <option value="items-end">End</option>
+              <option value="items-stretch">Stretch</option>
+            </Select>
+          </div>
+          <div className="flex items-center justify-between space-x-2">
+            <h2 className="c-title flex-1 whitespace-nowrap">Flex Wrap</h2>
+            <Select className="flex-1" sizing="sm">
+              <option value="flex-nowrap">No Wrap</option>
+              <option value="flex-wrap">Wrap</option>
+              <option value="flex-wrap-reverse">Wrap Reverse</option>
+            </Select>
           </div>
         </div>
       </div>
