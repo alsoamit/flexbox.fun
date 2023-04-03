@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://flexbox.fun
+
+# Sitemaps
+Sitemap: https://flexbox.fun/sitemap.xml
