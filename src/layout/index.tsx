@@ -5,9 +5,9 @@ import Navbar from './Navbar';
 export default function Layout({ children }: any) {
   const router = useRouter();
   return (
-    <div className="flex">
+    <div className="flex w-full max-w-full">
       <Navbar isAppNav={router.pathname === '/app'} />
-      <main className="flex-1">{children}</main>
+      <main className="w-full max-w-full flex-1">{children}</main>
     </div>
   );
 }

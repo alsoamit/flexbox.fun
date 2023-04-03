@@ -1,6 +1,6 @@
 import { Select, TextInput } from 'flowbite-react';
 import React from 'react';
-import { FlexItemsActionKind, IFlexItem } from './flexbox.types';
+import { ActionKind, FlexItemsActionKind, IFlexItem } from './flexbox.types';
 import { HiTrash } from 'react-icons/hi';
 
 interface IActiveItemBoxProps {
@@ -28,6 +28,9 @@ export default function ActiveItemBox({
     dispatchItem({
       type: FlexItemsActionKind.RemoveItem,
       payload: { id: item?.id },
+    });
+    dispatchItem({
+      type: ActionKind.ResetActiveFlexItem,
     });
   };
 

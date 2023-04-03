@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { HiOutlineStar } from 'react-icons/hi';
+import BuyMeACoffeeButton from './BMC';
 
 export default function Contributors() {
   return (
@@ -16,22 +17,23 @@ export default function Contributors() {
       </div>
       <div className="inset-0 bg-black/20 backdrop-blur-sm">
         <div className="c-container mx-auto flex flex-col items-center justify-center gap-y-8 pt-40">
-          <h1 className="c-title c-heading-text mx-auto max-w-3xl text-center text-6xl !font-bold leading-tight">
+          {/* <h1 className="c-title c-heading-text mx-auto max-w-3xl text-center text-6xl !font-bold leading-tight">
             Give us a star!
-          </h1>
+          </h1> */}
+          <BuyMeACoffeeButton />
           <div className="flex justify-center gap-4">
-            <Link
+            {/* <Link
               href="/app"
-              className="group flex items-center justify-center gap-1 rounded-full bg-orange-500 p-3 px-6 font-bold text-white"
+              className="flex items-center justify-center gap-1 p-3 px-6 font-bold text-white bg-orange-500 rounded-full group"
             >
               <HiOutlineStar className="text-xl" />
-              <span className="font-semibold opacity-90 transition-none duration-300 group-hover:opacity-100">
+              <span className="font-semibold transition-none duration-300 opacity-90 group-hover:opacity-100">
                 Star
               </span>
             </Link>
             <Link
               href="/tutorials"
-              className="group flex items-center gap-1 rounded-full bg-gray-700 p-3 px-6 font-bold text-white"
+              className="flex items-center gap-1 p-3 px-6 font-bold text-white bg-gray-700 rounded-full group"
             >
               <svg
                 stroke="currentColor"
@@ -41,7 +43,7 @@ export default function Contributors() {
                 height="1em"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 transition-all duration-300 group-hover:rotate-180"
+                className="w-4 h-4 transition-all duration-300 group-hover:rotate-180"
               >
                 <path
                   d="M16 7C15.4477 7 15 7.44772 15 8C15 8.55228 15.4477 9 16 9H19C19.5523 9 20 8.55228 20 8C20 7.44772 19.5523 7 19 7H16Z"
@@ -62,10 +64,10 @@ export default function Contributors() {
                   fill="currentColor"
                 ></path>
               </svg>
-              <span className="font-semibold opacity-90 transition-none duration-300 group-hover:opacity-100">
+              <span className="font-semibold transition-none duration-300 opacity-90 group-hover:opacity-100">
                 Contribute
               </span>
-            </Link>
+            </Link> */}
           </div>
           <div id="contributors" className="pt-16"></div>
         </div>

@@ -20,16 +20,18 @@ export default function FlexBoxContainer({
     { [appState.alignItems]: isFlex },
     { [appState.alignContent]: isFlex },
     { [appState.wrap]: isFlex },
-    { 'gap-5': isFlex },
-    { 'space-y-5': appState.display === 'block' }
+    { 'gap-4': isFlex },
+    { 'space-y-4': appState.display === 'block' }
   );
 
   return (
-    <section className="flex-1">
-      <div
-        className={`c-border bg-stripes h-[600px] w-full overflow-hidden rounded-lg p-5 ${containerClassNames}`}
-      >
-        {children}
+    <section className="w-full max-w-full flex-1">
+      <div className="bg-stripes w-full max-w-full overflow-hidden rounded-lg">
+        <div
+          className={`c-border h-[600px] w-full overflow-hidden rounded-lg p-4 ${containerClassNames}`}
+        >
+          {children}
+        </div>
       </div>
     </section>
   );

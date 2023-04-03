@@ -25,6 +25,7 @@ export type IAlignContent =
   | 'content-between'
   | 'content-around'
   | 'content-evenly'
+  | 'content-stretch'
   | 'content-baseline';
 export type IAlignItems =
   | 'items-start'
@@ -65,6 +66,7 @@ export enum ActionKind {
   SetAlignContent = 'SET_ALIGN_CONTENT',
   SetWrap = 'SET_WRAP',
   SetActiveFlexItem = 'SET_ACTIVE_FLEX_ITEM',
+  ResetActiveFlexItem = 'RESET_ACTIVE_FLEX_ITEM',
 }
 
 export interface IAction {

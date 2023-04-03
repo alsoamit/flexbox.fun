@@ -18,8 +18,8 @@ const initialState: IAppState = {
   display: 'flex',
   flexDirection: 'flex-row',
   justifyContent: 'justify-start',
-  alignItems: 'items-start',
-  alignContent: 'content-start',
+  alignItems: 'items-stretch',
+  alignContent: 'content-stretch',
   wrap: 'flex-nowrap',
   activeItem: null,
 };
@@ -104,6 +104,8 @@ const reducer = (state: IAppState, action: IAction): IAppState => {
       return { ...state, wrap: payload };
     case ActionKind.SetActiveFlexItem:
       return { ...state, activeItem: payload };
+    case ActionKind.ResetActiveFlexItem:
+      return { ...state, activeItem: null };
     default:
       return state;
   }
@@ -114,7 +116,7 @@ export default function FlexBox() {
   const [itemsState, dispatchItem] = useReducer(itemReducer, initialItemsState);
 
   return (
-    <div className="flex gap-5 py-5 pl-5">
+    <div className="flex w-full max-w-full gap-5 py-5 pl-5">
       <FlexBoxContainer appState={state}>
         {itemsState.items?.map((i: IFlexItem) => (
           <FlexBoxItem
