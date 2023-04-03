@@ -12,7 +12,8 @@
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "format": "prettier --write .",
     "prepare": "husky install",
-    "compile": "tsc"
+    "compile": "tsc",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@commitlint/cli": "^17.3.0",
@@ -28,6 +29,7 @@
     "flowbite-react": "^0.3.8",
     "framer-motion": "^9.0.1",
     "next": "13.0.6",
+    "next-sitemap": "^4.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-slick": "^0.29.0",
