@@ -70,24 +70,24 @@ export default function ActiveItemBox({
       </div>
       <h3 className="c-title-faded px-4">Flex Item</h3>
       <div className="flex items-center px-4">
-        <label className="c-title flex-1">Align Self</label>
+        <label className="c-title flex-1">align-self</label>
         <Select
           sizing="sm"
           className="flex-1"
           value={item.alignSelf}
           onChange={handleAlignSelfChange}
         >
-          <option value="self-auto">Auto</option>
-          <option value="self-start">Flex Start</option>
-          <option value="self-end">Flex End</option>
-          <option value="self-center">Center</option>
-          <option value="self-stretch">Stretch</option>
-          <option value="self-baseline">Baseline</option>
+          <option value="self-auto">auto</option>
+          <option value="self-start">flex-start</option>
+          <option value="self-end">flex-end</option>
+          <option value="self-center">center</option>
+          <option value="self-baseline">baseline</option>
+          <option value="self-stretch">stretch</option>
         </Select>
       </div>
       <div className="flex items-center px-4">
         <label htmlFor={`order-${item?.id}`} className="c-title flex-1">
-          Order
+          order
         </label>
         <TextInput
           sizing="sm"
@@ -100,7 +100,7 @@ export default function ActiveItemBox({
       </div>
       <div className="flex items-center px-4">
         <label htmlFor={`flex-grow-${item?.id}`} className="c-title flex-1">
-          Flex Grow
+          flex-grow
         </label>
         <TextInput
           sizing="sm"
@@ -113,7 +113,7 @@ export default function ActiveItemBox({
       </div>
       <div className="flex items-center px-4">
         <label htmlFor={`flex-shrink-${item?.id}`} className="c-title flex-1">
-          Flex Shrink
+          flex-shrink
         </label>
         <TextInput
           sizing="sm"
