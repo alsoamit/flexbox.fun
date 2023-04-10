@@ -11,8 +11,7 @@ export default function Home() {
         <title>Flexbox Playground</title>
         <meta
           name="description"
-          content="
-A Flexbox Playground that Lets You Experiment and Master Web Layouts"
+          content="Flexbox Playground - Experiment and Master Web Layouts with this interactive tool. Create amazing web layouts and test your skills with Flexbox Fun."
         />
         <meta property="og:url" content="https://www.flexbox.fun" />
         <meta property="og:type" content="website" />
@@ -23,7 +22,7 @@ A Flexbox Playground that Lets You Experiment and Master Web Layouts"
         <meta
           property="og:description"
           content="
-A Flexbox Playground that Lets You Experiment and Master Web Layouts"
+Experiment and Master Web Layouts with this interactive tool. Create amazing web layouts and test your skills with Flexbox Fun."
         />
         <meta
           property="og:image"
@@ -39,7 +38,7 @@ A Flexbox Playground that Lets You Experiment and Master Web Layouts"
         <meta
           name="twitter:description"
           content="
-A Flexbox Playground that Lets You Experiment and Master Web Layouts"
+Experiment and Master Web Layouts with this interactive tool. Create amazing web layouts and test your skills with Flexbox Fun."
         />
         <meta
           name="twitter:image"

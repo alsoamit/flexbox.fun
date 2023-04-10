@@ -116,7 +116,7 @@ export default function FlexBox() {
   const [itemsState, dispatchItem] = useReducer(itemReducer, initialItemsState);
 
   return (
-    <div className="flex w-full max-w-full gap-5 py-5 pl-5">
+    <div className="flex w-full max-w-full flex-col py-5 md:flex-row md:gap-5 md:pl-5">
       <FlexBoxContainer appState={state}>
         {itemsState.items?.map((i: IFlexItem) => (
           <FlexBoxItem

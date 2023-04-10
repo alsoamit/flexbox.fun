@@ -161,62 +161,63 @@ export function HeroWidget() {
       <div className="c-border flex gap-4 border-t-0 bg-gray-900 text-sm md:h-96 md:w-96">
         <div className="w-full space-y-4 p-5 dark:bg-gray-900">
           <div className="flex items-center justify-between space-x-2">
-            <h2 className="c-title flex-1 whitespace-nowrap">Flex Direction</h2>
+            <h3 className="c-title flex-1 whitespace-nowrap">flex-direction</h3>
             <Select
               value={flexDirection}
               onChange={(e) => setFlexDirection(e?.target?.value as any)}
               className="flex-1"
               sizing="sm"
             >
-              <option value="flex-col">Flex Col</option>
-              <option value="flex-col-reverse">Col Reverse</option>
-              <option value="flex-row">Row</option>
-              <option value="flex-row-reverse">Row Reverse</option>
+              <option value="flex-row">row</option>
+              <option value="flex-row-reverse">row-reverse</option>
+              <option value="flex-col">column</option>
+              <option value="flex-col-reverse">column-reverse</option>
             </Select>
           </div>
           <div className="flex items-center justify-between space-x-2">
-            <h2 className="c-title flex-1 whitespace-nowrap">
-              Justify Content
-            </h2>
+            <h3 className="c-title flex-1 whitespace-nowrap">
+              justify-content
+            </h3>
             <Select
               className="flex-1"
               sizing="sm"
               value={justifyContent}
               onChange={(e) => setJustifyContent(e?.target?.value as any)}
             >
-              <option value="justify-start">Start</option>
-              <option value="justify-center">Center</option>
-              <option value="justify-between">Between</option>
-              <option value="justify-around">Around</option>
-              <option value="justify-evenly">Evenly</option>
-              <option value="justify-start">End</option>
+              <option value="justify-start">flex-start</option>
+              <option value="justify-end">flex-end</option>
+              <option value="justify-center">center</option>
+              <option value="justify-between">space-between</option>
+              <option value="justify-around">space-around</option>
+              <option value="justify-evenly">space-evenly</option>
             </Select>
           </div>
           <div className="flex items-center justify-between space-x-2">
-            <h2 className="c-title flex-1 whitespace-nowrap">Align Items</h2>
+            <h3 className="c-title flex-1 whitespace-nowrap">align-items</h3>
             <Select
               value={alignItems}
               className="flex-1"
               sizing="sm"
               onChange={(e) => setAlignItems(e?.target?.value as any)}
             >
-              <option value="items-start">Start</option>
-              <option value="items-center">Center</option>
-              <option value="items-end">End</option>
-              <option value="items-stretch">Stretch</option>
+              <option value="items-start">flex-start</option>
+              <option value="items-end">flex-end</option>
+              <option value="items-center">center</option>
+              <option value="items-baseline">baseline</option>
+              <option value="items-stretch">stretch</option>
             </Select>
           </div>
           <div className="flex items-center justify-between space-x-2">
-            <h2 className="c-title flex-1 whitespace-nowrap">Flex Wrap</h2>
+            <h3 className="c-title flex-1 whitespace-nowrap">flex-wrap</h3>
             <Select
               value={flexWrap}
               onChange={(e) => setFlexWrap(e?.target?.value as any)}
               className="flex-1"
               sizing="sm"
             >
-              <option value="flex-nowrap">No Wrap</option>
-              <option value="flex-wrap">Wrap</option>
-              <option value="flex-wrap-reverse">Wrap Reverse</option>
+              <option value="flex-wrap">wrap</option>
+              <option value="flex-nowrap">nowrap</option>
+              <option value="flex-wrap-reverse">wrap-reverse</option>
             </Select>
           </div>
         </div>

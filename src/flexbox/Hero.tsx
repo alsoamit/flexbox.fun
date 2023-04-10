@@ -25,10 +25,10 @@ export default function FlexBoxContainer({
   );
 
   return (
-    <section className="w-full max-w-full flex-1">
-      <div className="bg-stripes w-full max-w-full overflow-hidden rounded-lg">
+    <section className="w-full max-w-full flex-1 pt-7 md:pt-0">
+      <div className="bg-stripes w-full max-w-full overflow-hidden md:rounded-lg">
         <div
-          className={`c-border h-[600px] w-full overflow-hidden rounded-lg p-4 ${containerClassNames}`}
+          className={`c-border h-80 w-full overflow-hidden rounded-lg p-4 md:h-[600px] ${containerClassNames}`}
         >
           {children}
         </div>

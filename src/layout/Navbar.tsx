@@ -52,16 +52,23 @@ export default function Navbar({ isAppNav = false }: INavbarProps) {
 
   return (
     <>
-      <div className="w-16"></div>
-      <div className="fixed top-0 bottom-0 left-0 flex w-16 flex-col justify-between dark:bg-gray-800 dark:text-white/60">
-        <Link href="/" id="logo" className="flex justify-center px-3 py-2">
+      <div className="md:w-16"></div>
+      <div className="fixed top-0 left-0 right-0 flex h-12 w-full justify-between dark:bg-gray-800 dark:text-white/60 md:bottom-0 md:right-auto md:h-auto md:w-16 md:flex-col">
+        <Link
+          href="/"
+          id="logo"
+          className="flex items-center justify-center gap-2 px-3 py-2"
+        >
           <img
             src="/images/logo.png"
-            className="mb-1 w-full"
+            className="mb-1 h-8 md:h-auto md:w-full"
             alt="flexbox.fun"
           />
+          <p className="c-heading-text text-base font-bold italic text-gray-100 md:hidden">
+            Flexbox.fun
+          </p>
         </Link>
-        <div className="flex flex-1 flex-col items-stretch gap-y-4 py-8">
+        <div className="hidden flex-1 flex-col items-stretch gap-y-4 py-8 md:flex">
           <Link href="/app" className="flex justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +122,7 @@ export default function Navbar({ isAppNav = false }: INavbarProps) {
             </svg>
           </Link>
         </div>
-        <div className="flex items-center justify-center py-4">
+        <div className="flex items-center justify-center py-4 pr-2 md:pr-0">
           <Link href="">
             <AiOutlineGithub className="text-3xl" />
           </Link>

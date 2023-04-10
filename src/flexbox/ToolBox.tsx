@@ -57,8 +57,8 @@ export default function ToolBox({
 
   return (
     <>
-      <div className="w-80"></div>
-      <section className="fixed top-0 bottom-0 right-0 col-span-4 w-80 space-y-6 overflow-y-auto p-2 py-5 dark:bg-gray-800">
+      <div className="md:w-80"></div>
+      <section className="top-0 bottom-0 right-0 col-span-4 space-y-6 overflow-y-auto p-2 py-5 dark:bg-gray-800 md:fixed md:w-80">
         <div className="">
           <button
             onClick={(e: any) =>
