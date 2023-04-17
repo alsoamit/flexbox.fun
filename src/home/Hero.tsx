@@ -25,7 +25,7 @@ export default function Hero() {
       <div className="inset-0 bg-black/20 backdrop-blur-sm">
         <div className="c-container mx-auto flex flex-col items-center justify-center gap-y-6 pt-32 md:pt-40">
           <h1 className="c-title c-heading-text mx-auto max-w-2xl text-center text-5xl !font-bold leading-tight md:text-6xl">
-            Unleash Your Creativity with Flexbox
+            Master Flexbox with our Fun Playground
           </h1>
           <p className="px-4 text-center">
             A Flexbox Playground that Lets You Experiment and Master Web Layouts

@@ -12,11 +12,11 @@ export default function Features() {
               Learn difficult concepts by playing around
             </h3>
             <p className="leading-relaxed">
-              Our Flexbox Playground offers interactive learning experience to
-              master difficult flexbox concepts by experimenting. With our
-              interactive tools and intuitive interface, you can play around
-              with various flexbox layout possibilities, tweak and adjust
-              flexbox properties, and see the results in real-time.
+              The Playground offers interactive learning experience to master
+              difficult flexbox concepts by experimenting. With our interactive
+              tools and intuitive interface, you can play around with various
+              flexbox layout possibilities, tweak and adjust flexbox properties,
+              and see the results in real-time.
             </p>
             <div className="flex">
               <Link
@@ -54,11 +54,10 @@ export default function Features() {
               Build your confidence in Flexbox
             </h3>
             <p className="leading-relaxed">
-              Our Flexbox Playground is the perfect platform to build your
-              confidence in flexbox. Whether you&apos;re a beginner or an
-              experienced developer, our intuitive interface and interactive
-              tools make it easy to learn and master flexbox. Try it today and
-              start building with confidence!
+              It is the perfect platform to build your confidence in flexbox.
+              With our intuitive interface and interactive tools, you can
+              experiment with flexbox properties like flex-direction, flex-wrap,
+              flex-item, and more.
             </p>
             <div className="flex">
               <Link
@@ -96,10 +95,9 @@ export default function Features() {
               Highly Interactive tutorials with widgets
             </h3>
             <p className="leading-relaxed">
-              Our Flexbox Playground offers a dedicated tutorials page with
-              highly interactive flexbox tutorials that include added widgets
-              for experimentation. Visit our tutorials page and start mastering
-              flexbox today!
+              Check out our highly interactive flexbox tutorials that include
+              added widgets for experimentation. Visit our tutorials page and
+              start mastering flexbox today!
             </p>
             <div className="flex">
               <Link
