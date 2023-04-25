@@ -7,8 +7,6 @@ interface INavbarProps {
 }
 
 export default function Navbar({ isAppNav = false }: INavbarProps) {
-  console.log({ isAppNav });
-
   if (!isAppNav)
     return (
       <div className="fixed top-0 left-0 right-0 z-30 bg-white/10 backdrop-blur-lg">

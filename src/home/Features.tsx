@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
-import { FlexBlockWidget, ItemSelfAlignWidget } from 'src/docs';
+import DisplayWidget from 'src/widgets/DisplayWidget';
+import ItemSelfAlignWidget from 'src/widgets/ItemSelfAlignWidget';
 
 export default function Features() {
   return (
@@ -45,7 +46,7 @@ export default function Features() {
             </div>
           </div>
           <div className="relative h-80 flex-1">
-            <FlexBlockWidget />
+            <DisplayWidget />
           </div>
         </div>
         <div className="flex flex-col gap-8 md:flex-row-reverse md:gap-16">
@@ -140,7 +141,7 @@ export default function Features() {
             </div>
           </div>
           <div className="h-80 flex-1">
-            <FlexBlockWidget />
+            <DisplayWidget />
           </div>
         </div>
       </div>

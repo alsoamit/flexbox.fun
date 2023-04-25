@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import React from 'react';
-import { HiOutlineStar } from 'react-icons/hi';
 import BuyMeACoffeeButton from './BMC';
 
 export default function Contributors() {
