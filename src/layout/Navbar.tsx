@@ -121,9 +121,9 @@ export default function Navbar({ isAppNav = false }: INavbarProps) {
           </Link>
         </div>
         <div className="flex items-center justify-center py-4 pr-2 md:pr-0">
-          <Link href="">
+          <a href="https://github.com/alsoamit/flexbox.fun">
             <AiOutlineGithub className="text-3xl" />
-          </Link>
+          </a>
         </div>
       </div>
     </>
