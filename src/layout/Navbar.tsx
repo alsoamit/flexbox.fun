@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import React from 'react';
 import { AiOutlineGithub } from 'react-icons/ai';
+import { BiCodeBlock } from 'react-icons/bi';
 
 interface INavbarProps {
   isAppNav?: boolean;
@@ -70,25 +70,7 @@ export default function Navbar({ isAppNav = false }: INavbarProps) {
         </Link>
         <div className="hidden flex-1 flex-col items-stretch gap-y-4 py-8 md:flex">
           <Link href="/app" className="flex justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="h-7 w-7"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z"
-              />
-            </svg>
+            <BiCodeBlock size={27} />
           </Link>
           <Link href="/tutorials" className="flex justify-center">
             <svg
@@ -123,7 +105,7 @@ export default function Navbar({ isAppNav = false }: INavbarProps) {
           </Link>
         </div>
         <div className="flex items-center justify-center py-4 pr-2 md:pr-0">
-          <Link href="">
+          <Link href="https://github.com/alsoamit/flexbox.fun" target="_blank">
             <AiOutlineGithub className="text-3xl" />
           </Link>
         </div>
