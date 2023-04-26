@@ -1,7 +1,6 @@
-import Link from 'next/link';
 import React from 'react';
-import { HiOutlineStar } from 'react-icons/hi';
 import BuyMeACoffeeButton from './BMC';
+import { HiOutlineStar } from 'react-icons/hi';
 
 export default function Contributors() {
   return (
@@ -16,11 +15,20 @@ export default function Contributors() {
         </div>
       </div>
       <div className="inset-0 bg-black/20 backdrop-blur-sm">
-        <div className="c-container mx-auto flex flex-col items-center justify-center gap-y-8 pt-40">
+        <div className="c-container mx-auto flex flex-col items-center justify-center gap-y-8 pt-28">
           {/* <h1 className="c-title c-heading-text mx-auto max-w-3xl text-center text-6xl !font-bold leading-tight">
             Give us a star!
           </h1> */}
           <BuyMeACoffeeButton />
+          <a
+            href="https://github.com/alsoamit/flexbox.fun"
+            className="group flex items-center justify-center gap-1 rounded-xl bg-orange-500 p-3 px-6 font-bold text-white"
+          >
+            <HiOutlineStar className="text-xl" />
+            <span className="font-semibold opacity-90 transition-none duration-300 group-hover:opacity-100">
+              Star the Repo
+            </span>
+          </a>
           <div className="flex justify-center gap-4">
             {/* <Link
               href="/app"

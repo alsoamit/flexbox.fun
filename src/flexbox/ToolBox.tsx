@@ -1,4 +1,4 @@
-import { Button, Dropdown, Select } from 'flowbite-react';
+import { Select } from 'flowbite-react';
 import React, { useEffect } from 'react';
 import { HiOutlinePlus } from 'react-icons/hi';
 import { ActionKind, FlexItemsActionKind, IAppState } from './flexbox.types';

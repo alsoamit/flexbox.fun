@@ -7,8 +7,6 @@ interface INavbarProps {
 }
 
 export default function Navbar({ isAppNav = false }: INavbarProps) {
-  console.log({ isAppNav });
-
   if (!isAppNav)
     return (
       <div className="fixed top-0 left-0 right-0 z-30 bg-white/10 backdrop-blur-lg">
@@ -105,9 +103,13 @@ export default function Navbar({ isAppNav = false }: INavbarProps) {
           </Link>
         </div>
         <div className="flex items-center justify-center py-4 pr-2 md:pr-0">
-          <Link href="https://github.com/alsoamit/flexbox.fun" target="_blank">
+          <a
+            rel="noreferrer"
+            href="https://github.com/alsoamit/flexbox.fun"
+            target="_blank"
+          >
             <AiOutlineGithub className="text-3xl" />
-          </Link>
+          </a>
         </div>
       </div>
     </>
