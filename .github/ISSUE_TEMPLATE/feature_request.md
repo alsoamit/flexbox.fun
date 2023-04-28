@@ -1,16 +1,16 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
+about: Suggest a feature for this project
+title: "[FEAT] "
+labels: enhancement
 assignees: ''
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
+**Detailed description of the Problem**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
-**Describe the solution you'd like**
+**Description of your Solution**
 A clear and concise description of what you want to happen.
 
 **Describe alternatives you've considered**
