@@ -31,13 +31,13 @@ Description of the project files and directories.
 
 An explanation of the `package.json` scripts.
 
-| Command         | Description                                 |
-| --------------- | ------------------------------------------- |
-| `dev`           | Run Flexbox.fun in a development environment|
-| `build`         | Create a production build                   |
-| `start`         | Start production build                      |
-| `lint`          | Run linter to catch errors                  |
-| `check-types`   | Check for Typescript errors                 |
-| `check-format`  | Check for Prettier formatting errors        |
-| `format`        | Fix Prettier formatting errors              |
-| `prepare`       | Prepare Husky                               |
+| Command        | Description                                  |
+| -------------- | -------------------------------------------- |
+| `dev`          | Run Flexbox.fun in a development environment |
+| `build`        | Create a production build                    |
+| `start`        | Start production build                       |
+| `lint`         | Run linter to catch errors                   |
+| `check-types`  | Check for Typescript errors                  |
+| `check-format` | Check for Prettier formatting errors         |
+| `format`       | Fix Prettier formatting errors               |
+| `prepare`      | Prepare Husky                                |
